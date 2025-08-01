@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folder
+.venv/
+
+# Environment variables file (if you want to keep secrets private)
+.env
+
+# Python package manager files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# VSCode workspace settings (optional)
+.vscode/
+
+# macOS system files (if you are on Mac)
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Python test cache
+.pytest_cache/
+
+# Others
+.uv/
+uv.lock
