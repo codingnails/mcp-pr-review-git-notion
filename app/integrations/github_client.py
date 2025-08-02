@@ -1,6 +1,6 @@
 import requests
 import traceback
-from config.settings import Settings
+from app.config.settings import Settings
 
 
 class GitHubClient:

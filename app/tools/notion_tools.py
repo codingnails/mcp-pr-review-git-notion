@@ -1,4 +1,4 @@
-from integrations.notion_client import NotionClient
+from app.integrations.notion_client import NotionClient
 import sys
 import traceback
 

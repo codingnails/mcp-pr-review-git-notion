@@ -2,10 +2,10 @@ import sys
 import traceback
 from typing import Any, Dict
 from mcp.server.fastmcp import FastMCP
-from tools.github_tools import fetch_pr
-from tools.notion_tools import create_notion_page
-from integrations.github_client import GitHubClient
-from integrations.notion_client import NotionClient
+from app.tools.github_tools import fetch_pr
+from app.tools.notion_tools import create_notion_page
+from app.integrations.github_client import GitHubClient
+from app.integrations.notion_client import NotionClient
 
 class PRAnalyzer:
     def __init__(self):

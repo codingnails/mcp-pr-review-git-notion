@@ -1,4 +1,4 @@
-from config.settings import Settings
+from app.config.settings import Settings
 from notion_client import Client
 import sys
 import traceback

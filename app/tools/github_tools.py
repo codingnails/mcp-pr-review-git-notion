@@ -1,4 +1,4 @@
-from integrations.github_client import GitHubClient
+from app.integrations.github_client import GitHubClient
 from typing import Dict, Any
 import sys
 import traceback
