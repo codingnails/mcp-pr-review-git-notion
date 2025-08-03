@@ -21,11 +21,11 @@ class NotionClient:
             traceback.print_exc(file=sys.stderr)
             sys.exit(1)
 
-    def create_page(self, title: str, content: str) -> str:
+    async def create_page(self, title: str, content: str) -> str:
             """Create a Notion page with PR analysis."""
             print(f"Creating Notion page: {title}", file=sys.stderr)
             try:
-                self.notion.pages.create(
+                await self.notion.pages.create(
                     parent={"type": "page_id", "page_id": self.notion_page_id},
                     properties={"title": {"title": [{"text": {"content": title}}]}},
                     children=[{

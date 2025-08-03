@@ -6,7 +6,7 @@ async def create_notion_page(title: str, content: str) -> str:
             """Create a Notion page with PR analysis."""
             print(f"Creating Notion page: {title}", file=sys.stderr)
             try:
-                NotionClient().create_page(title, content)
+                await NotionClient().create_page(title, content)
                 print(f"Notion page '{title}' created successfully!", file=sys.stderr)
                 return f"Notion page '{title}' created successfully!"
             except Exception as e:
