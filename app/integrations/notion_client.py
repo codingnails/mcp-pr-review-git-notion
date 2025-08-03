@@ -22,27 +22,27 @@ class NotionClient:
             sys.exit(1)
 
     async def create_page(self, title: str, content: str) -> str:
-            """Create a Notion page with PR analysis."""
-            print(f"Creating Notion page: {title}", file=sys.stderr)
-            try:
-                await self.notion.pages.create(
-                    parent={"type": "page_id", "page_id": self.notion_page_id},
-                    properties={"title": {"title": [{"text": {"content": title}}]}},
-                    children=[{
-                        "object": "block",
-                        "type": "paragraph",
-                        "paragraph": {
-                            "rich_text": [{
-                                "type": "text",
-                                "text": {"content": content}
-                            }]
-                        }
-                    }]
-                )
-                print(f"Notion page '{title}' created successfully!", file=sys.stderr)
-                return f"Notion page '{title}' created successfully!"
-            except Exception as e:
-                error_msg = f"Error creating Notion page: {str(e)}"
-                print(error_msg, file=sys.stderr)
-                traceback.print_exc(file=sys.stderr)
-                return error_msg
+        """Create a Notion page with PR analysis."""
+        print(f"Creating Notion page: {title}", file=sys.stderr)
+        try:
+            await self.notion.pages.create(
+                parent={"type": "page_id", "page_id": self.notion_page_id},
+                properties={"title": {"title": [{"text": {"content": title}}]}},
+                children=[{
+                    "object": "block",
+                    "type": "paragraph",
+                    "paragraph": {
+                        "rich_text": [{
+                            "type": "text",
+                            "text": {"content": content}
+                        }]
+                    }
+                }]
+            )
+            print(f"Notion page '{title}' created successfully!", file=sys.stderr)
+            return f"Notion page '{title}' created successfully!"
+        except Exception as e:
+            error_msg = f"Error creating Notion page: {str(e)}"
+            print(error_msg, file=sys.stderr)
+            traceback.print_exc(file=sys.stderr)
+            return error_msg
